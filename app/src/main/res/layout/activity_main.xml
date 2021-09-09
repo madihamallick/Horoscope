@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/backgroundImageView"
+        android:layout_width="419dp"
+        android:layout_height="730dp"
+        android:background="@color/black"
+        android:contentDescription="@string/background_description"
+        android:scaleType="centerCrop"
+        android:scrollbars="vertical"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/original" />
+
+    <TextView
+        android:id="@+id/promptTextView"
+        android:layout_width="296dp"
+        android:layout_height="50dp"
+        android:fontFamily="serif"
+        android:gravity="center_horizontal"
+        android:text="Enter your Zodiac Sign"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.036" />
+
+    <Spinner
+        android:id="@+id/select_sun_sign"
+        android:layout_width="291dp"
+        android:layout_height="48dp"
+        android:background="@color/white"
+        android:gravity="end"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/promptTextView"
+        app:layout_constraintVertical_bias="0.042" />
+
+    <Button
+        android:id="@+id/get_prediction_btn"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:background="@drawable/search_btn"
+        android:onClick=""
+        android:text="SEARCH"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/select_sun_sign"
+        app:layout_constraintVertical_bias="0.043"
+        tools:ignore="OnClick" />
+
+    <TextView
+        android:id="@+id/resultView"
+        android:layout_width="310dp"
+        android:layout_height="365dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="serif"
+        android:foregroundGravity="fill_horizontal"
+        android:justificationMode="inter_word"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/get_prediction_btn"
+        app:layout_constraintVertical_bias="0.875" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
